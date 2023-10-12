@@ -1,9 +1,14 @@
-import {useState} from 'react'
-function ItemCount({stock}){
-    const[count, setCount]= useState(1)
-    const [stocks, setStocks]= useState(stock)
+import {useState,useEffect} from 'react'
+function ItemCount({initial, stock, onAdd}){
+    console.log (initial)
+    console.log (stock)
+    const[count, setCount]= useState(parseInt(initial))
+    const [stocks, setStocks]= useState(stock)//para que usa esto la profe? 
+    //stocks ¿pq teniendo valor del stock no lo tiene en cuenta en el if y no suma
+    console.log(stock)
+    console.log('stock')
     function sumar(){
-        if(count<stocks){
+        if(count<stock){
             setCount(count+1)
         }
     }
@@ -12,11 +17,15 @@ function ItemCount({stock}){
             setCount(count-1)
         }
     }
+    useEffect(() => {
+		setCount(parseInt(initial));
+	}, [initial]);
     return(
         <div>
             <button onClick={restar}>-</button>
             <button >{count}</button>
             <button onClick={sumar}>+</button>
+            <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 
