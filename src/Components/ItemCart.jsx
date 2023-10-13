@@ -4,8 +4,11 @@ function ItemCart({item}){
     const{totalPrice}= useContext(CartContext)
     return(
         <>
-        <div>{item.title } </div>
-        
+        <ul className="itemCart">
+            <li>{item.title } </li>
+            <li>{item.title } </li>
+            <img src={item.img}/>
+        </ul>
         </>
     )
 

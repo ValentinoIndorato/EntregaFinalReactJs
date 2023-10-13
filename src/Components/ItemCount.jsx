@@ -13,7 +13,7 @@ function ItemCount({initial, stock, onAdd}){
         }
     }
     function restar(){
-        if(count>1){
+        if(count>0){
             setCount(count-1)
         }
     }
@@ -25,7 +25,7 @@ function ItemCount({initial, stock, onAdd}){
             <button onClick={restar}>-</button>
             <button >{count}</button>
             <button onClick={sumar}>+</button>
-            <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button disabled={stock <= 0|| count <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 

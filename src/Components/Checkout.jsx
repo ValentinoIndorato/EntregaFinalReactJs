@@ -3,7 +3,7 @@ import { getFirestore, addDoc, collection, doc, getDoc, updateDoc } from "fireba
 import { useContext } from "react"
 import { CartContext } from "./Context/CartContext" 
 function Checkout(){
-   const {cart, removeProduct,totalPrice} = useContext(CartContext)
+   const {clearCart,cart, removeProduct,totalPrice,} = useContext(CartContext)
    const [nombre, setnombre]= useState('a')
    const [apellido, setapellido]= useState('')
    const [telefono, settelefono]= useState('')
@@ -73,14 +73,15 @@ function Checkout(){
 }
    
    return(
-    <div>
+    <div className="Checkout">
         <h2>Complete con sus datos</h2>
-        <form onSubmit={manejarFormulario}>
-            {cart.map((p)=>(<div key={p.id}>
+        {cart.map((p)=>(<div key={p.id}>
                                 <p>{''} {p.title}</p>
                                 <p>${p.Precio}</p>
                                 <p>{p.Precio * p.stock }</p>
                              </div>))}
+        <form onSubmit={manejarFormulario} className="form">
+            
             <label>Nombre: </label>
             <input type="text" value={nombre} onChange={(e)=>setnombre(e.target.value)}/>
             <label>Apellido: </label>
@@ -90,9 +91,8 @@ function Checkout(){
             <label>Email: </label>
             <input type="email"value={email} onChange={(e)=>setemail(e.target.value)} />
             <label>Confirmar emai: </label>
-            <input type="email"value={emailrep} onChange={(e)=>setemailrep(e.target.value)} />
-            {error && <p>{error}</p>}
-            {ordenId &&(<p>Gracias por comprar</p>)}
+            <input type="email"value={emailrep} onChange={(e)=>setemailrep(e.target.value)} />           
+            {ordenId ? <p className="enviadoForm">Gracias por comprar, tu numeor de orden es {ordenId} {clearCart()}</p> : <p className="errorForm">{error}</p>/*como redirecciono, cuando esto termine , al home?*/}
             <button type="submit" >Finalizar compra</button>                     
         </form>
     </div>

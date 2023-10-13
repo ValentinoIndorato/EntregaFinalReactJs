@@ -9,7 +9,7 @@ export function CartContextProvider({children}){
         if (isInCart(item.id)) {
             console.log(item)
           setCart(
-            item.map((product) => {
+            cart.map((product) => {
               return product.id === item.id ? { ...product, stock: product.stock + stock }: product;
             })
           );
