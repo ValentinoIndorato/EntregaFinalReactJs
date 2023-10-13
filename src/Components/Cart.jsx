@@ -5,7 +5,7 @@ import { useContext } from "react"
 import { CartContext } from "./Context/CartContext"
 function Cart() {
     const { cart, totalPrice } = useContext(CartContext)
-    console.log(totalPrice())
+    console.log(cart.length )
     /*const order={
         buyer:{
             name:'Cosme',
@@ -25,7 +25,7 @@ function Cart() {
         const orderCollection= collection(db, 'orders')
         addDoc(orderCollection, order).then(({id}))
     }*/
-    if (cart.leght === 0) {
+    if (cart.length  === 0) {
         return (
             <>
                <p>No hay productos</p>
@@ -36,7 +36,7 @@ function Cart() {
     return (
         <>
           {cart.map((p) => (<ItemCart key={p.id} item={p} />))}
-          <p>Total:{totalPrice()}</p>
+          <p>Monto total: ${totalPrice()}</p>
           <Link to='/checkout' >{' '} <button>Confirmar</button></Link>
         </>
     )

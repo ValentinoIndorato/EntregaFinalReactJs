@@ -1,13 +1,15 @@
 /*F1EDF6 color cuerpo*/
 
 .NabVar{
-  background-color: beige;
+  background-color: beige; 
+  display: flex;
+  justify-content: space-between;
   
 }
-.NabVar ul {
+.NabVar ul {  
   
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   text-align: center;
   list-style: none;  
 }
@@ -17,16 +19,32 @@
 
 }
 .cartWidget{
-  position: absolute;
-  
+  position: absolute;  
+
   right: 2rem;
-}
-.cartWidget span{
-  position: absolute;
 
 }
+.cartWidget span{
+  position: absolute; 
+
+}
+
 .NabVar a {text-decoration: none;
 color: #282c34;}
+.NabVar .CartNav{
+  
+  text-align: right;
+  
+}
+.NabVar .CartNav img{
+  width: 50%;
+}
+.NabVar span{
+  font-size: larger;
+  color: rgb(255, 23, 23);
+  background-color: black;
+  border-radius: 100%;
+}
 
 .ItemListContainer{
   display: flex;
@@ -38,6 +56,10 @@ color: #282c34;}
   padding: 0.5rem;
   margin: 1rem;
   width: 10rem;
+  height: 22rem;
+}
+.card:hover{
+  filter: blur(4px);
 }
 .card a{
   text-decoration: none;
@@ -46,7 +68,22 @@ color: #282c34;}
 .card img{
   width: 100%;
 }
-
+.card ul{
+  list-style: none;  
+  padding: 0;
+}
+.card ul li{
+  font-size:medium;
+  padding-left:  0.5rem;
+}
+.card .title{
+  font-size:larger;
+  padding-left:  0;
+  
+}
+.card .SmallDescription{
+  font-size:smaller;
+}
 .buttonAdd{
 
   background-color: #61dafb;
@@ -57,12 +94,39 @@ color: #282c34;}
   display: flex;
   flex-wrap: wrap;
 }
+.ItemDetail ul{
+  list-style: none;
+  padding-left:  0; 
+}
+.ItemDetail ul li{
+  font-size: medium;
+  color: blue;
+  padding-left:  0.5rem; 
+}
+.ItemDetail .itemDetailTitle{
+  font-size: larger;
+  padding-left:  0;
+  color: rgb(255, 22, 22); 
+}
 .ItemDetail img{
   width: 25%;
+}
+.itemCart{
+  list-style: none;
+  padding: 0;
 }
 .itemCart img{
   width: 25%;
 }
+.itemCart li{
+  list-style: none;
+  padding-left: 0.5rem;
+}
+.itemCart .titleCart{
+  padding-left: 0;
+  color: rgb(250, 10, 10);
+}
+
 .Checkout{
   display: flex;
   flex-direction: column;

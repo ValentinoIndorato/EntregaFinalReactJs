@@ -5,8 +5,11 @@ function ItemCart({item}){
     return(
         <>
         <ul className="itemCart">
-            <li>{item.title } </li>
-            <li>{item.title } </li>
+            <li className="titleCart">{item.title } </li>
+            <li>Descripción: {item.SmallDescription } </li>
+            <li>Cantidad a comprar: {item.stock } </li>
+            <li>Precio unitario: ${item.Precio} </li>
+            <li>Precio por cantidad: ${item.Precio * item.stock} </li>
             <img src={item.img}/>
         </ul>
         </>

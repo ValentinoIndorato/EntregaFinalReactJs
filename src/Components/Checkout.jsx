@@ -2,9 +2,10 @@ import { useState } from "react"
 import { getFirestore, addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore"
 import { useContext } from "react"
 import { CartContext } from "./Context/CartContext" 
+import { Link } from "react-router-dom"
 function Checkout(){
    const {clearCart,cart, removeProduct,totalPrice,} = useContext(CartContext)
-   const [nombre, setnombre]= useState('a')
+   const [nombre, setnombre]= useState('')
    const [apellido, setapellido]= useState('')
    const [telefono, settelefono]= useState('')
    const [email, setemail]= useState('')
@@ -75,11 +76,7 @@ function Checkout(){
    return(
     <div className="Checkout">
         <h2>Complete con sus datos</h2>
-        {cart.map((p)=>(<div key={p.id}>
-                                <p>{''} {p.title}</p>
-                                <p>${p.Precio}</p>
-                                <p>{p.Precio * p.stock }</p>
-                             </div>))}
+        
         <form onSubmit={manejarFormulario} className="form">
             
             <label>Nombre: </label>
@@ -93,8 +90,9 @@ function Checkout(){
             <label>Confirmar emai: </label>
             <input type="email"value={emailrep} onChange={(e)=>setemailrep(e.target.value)} />           
             {ordenId ? <p className="enviadoForm">Gracias por comprar, tu numeor de orden es {ordenId} {clearCart()}</p> : <p className="errorForm">{error}</p>/*como redirecciono, cuando esto termine , al home?*/}
-            <button type="submit" >Finalizar compra</button>                     
+            {ordenId ? "" :<button  disabled={!(nombre ,apellido, telefono, email, emailrep)    } type="submit" >Finalizar compra</button> }                    
         </form>
+       { ordenId ? <Link to='/' >{' '} <button>Inicio</button></Link> :<Link to='/Cart' >{' '} <button>Volver al Carrito</button></Link>}
     </div>
    )
    
@@ -105,3 +103,8 @@ export default Checkout
             <input type="text"value={ordenId} onChange={(e)=>setordenId(e.target.value)} />
             <label></label>
             <input type="text" value={mensaje} onChange={(e)=>setmensaje(e.target.value)}/>*/
+/*{cart.map((p)=>(<div key={p.id}>
+    <p>{''} {p.title}</p>
+    <p>${p.Precio}</p>
+    <p>${p.Precio * p.stock }</p>
+ </div>))}*/

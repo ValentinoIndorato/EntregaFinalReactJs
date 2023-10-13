@@ -13,11 +13,13 @@ function ItemDetail({ item }) {
     return (
         <div className="ItemDetail">
         <ul >
-            <li>{item.title}</li>
-            <li>{item.Precio}</li>
+            <li className="itemDetailTitle">{item.title}</li>
+            <li>Precio: ${item.Precio}</li>
+            {item.PrecioXKg && <li>Precio por kg: {item.PrecioXKg}</li> }
             <li>En Stock: {item.stock}</li>
-            <li>{item.NamePuesto}</li>
-            <li>{item.Category}</li>
+            <li>Puesto: {item.NamePuesto}</li>
+            <li>N°Puesto: {item.NumPuesto}</li>
+            <li>Categoria: {item.Category}</li>
          </ul>
           <img src={item.img} />
           {/*cuando se le hace doble click tira error, para ver replicar boton con ItemCount*/
