@@ -3,6 +3,7 @@ import ItemCart from "./ItemCart"
 import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "./Context/CartContext"
+
 function Cart() {
     const { cart, totalPrice } = useContext(CartContext)
     console.log(cart.length )
@@ -33,11 +34,12 @@ function Cart() {
             </>
         )
     }
-    return (
-        <>
-          {cart.map((p) => (<ItemCart key={p.id} item={p} />))}
+    return (<>
+        <div className="cart">
           <p>Monto total: ${totalPrice()}</p>
-          <Link to='/checkout' >{' '} <button>Confirmar</button></Link>
+          <Link to='/checkout' >{' '} <button>Confirmar</button></Link>             
+        </div>
+        <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
         </>
     )
 }

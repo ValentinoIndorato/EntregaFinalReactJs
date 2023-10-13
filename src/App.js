@@ -16,12 +16,12 @@ function App() {
       <CartContextProvider>
       <NavBar /> 
       <Routes>
-      <Route path='/' element={<ItemListContainer />} />
+      <Route path='/' element={<ItemListContainer /> } />
         <Route path='/category/:id'  element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer/>} />  
         <Route path="/cart" element={<Cart/>} />                                
         <Route path="/checkout" element={<Checkout/>} />  
-        <Route path='*'element={<Error404 />} />         
+        <Route path='*'element={<Error404 /> /*cuando modifico links que sean de categoria o id no direcciona a error*/} />         
       </Routes>
       </CartContextProvider>
       </BrowserRouter>

@@ -12,6 +12,7 @@ function ItemDetail({ item }) {
     }
     return (
         <div className="ItemDetail">
+            
         <ul >
             <li className="itemDetailTitle">{item.title}</li>
             <li>Precio: ${item.Precio}</li>
@@ -20,10 +21,12 @@ function ItemDetail({ item }) {
             <li>Puesto: {item.NamePuesto}</li>
             <li>N°Puesto: {item.NumPuesto}</li>
             <li>Categoria: {item.Category}</li>
-         </ul>
-          <img src={item.img} />
-          {/*cuando se le hace doble click tira error, para ver replicar boton con ItemCount*/
+            {/*SOLUCIONADO? cuando se le hace doble click tira error, para ver replicar boton con ItemCount*/
               goToCart ? <Link to='/cart'>Terminar compra</Link> : <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />}
+
+         </ul>
+         
+          <img src={item.img} />
         </div>
     )
 }

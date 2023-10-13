@@ -74,27 +74,40 @@ function Checkout(){
 }
    
    return(
-    <div className="Checkout">
-        <h2>Complete con sus datos</h2>
-        
-        <form onSubmit={manejarFormulario} className="form">
-            
-            <label>Nombre: </label>
-            <input type="text" value={nombre} onChange={(e)=>setnombre(e.target.value)}/>
-            <label>Apellido: </label>
-            <input type="text" value={apellido} onChange={(e)=>setapellido(e.target.value)}/>
-            <label>Telefono: </label>
-            <input type="number"value={telefono} onChange={(e)=>settelefono(e.target.value)} />
-            <label>Email: </label>
-            <input type="email"value={email} onChange={(e)=>setemail(e.target.value)} />
-            <label>Confirmar emai: </label>
-            <input type="email"value={emailrep} onChange={(e)=>setemailrep(e.target.value)} />           
-            {ordenId ? <p className="enviadoForm">Gracias por comprar, tu numeor de orden es {ordenId} {clearCart()}</p> : <p className="errorForm">{error}</p>/*como redirecciono, cuando esto termine , al home?*/}
-            {ordenId ? "" :<button  disabled={!(nombre ,apellido, telefono, email, emailrep)    } type="submit" >Finalizar compra</button> }                    
-        </form>
-       { ordenId ? <Link to='/' >{' '} <button>Inicio</button></Link> :<Link to='/Cart' >{' '} <button>Volver al Carrito</button></Link>}
-    </div>
-   )
+        <>  
+        <div className="ordenCheckout">
+            <div className="Checkout">
+                <h2>Complete con sus datos</h2>             
+                <form onSubmit={manejarFormulario} className="form">            
+                    <label>Nombre: </label>
+                    <input type="text" value={nombre} onChange={(e)=>setnombre(e.target.value)}/>
+                    <label>Apellido: </label>
+                    <input type="text" value={apellido} onChange={(e)=>setapellido(e.target.value)}/>
+                    <label>Telefono: </label>
+                    <input type="number"value={telefono} onChange={(e)=>settelefono(e.target.value)} />
+                    <label>Email: </label>
+                    <input type="email"value={email} onChange={(e)=>setemail(e.target.value)} />
+                    <label>Confirmar emai: </label>
+                    <input type="email"value={emailrep} onChange={(e)=>setemailrep(e.target.value)} />           
+                    {ordenId ? <p className="enviadoForm">Gracias por comprar, tu numeor de orden es {ordenId} {clearCart()}</p> : <p className="errorForm">{error}</p>/*como redirecciono, cuando esto termine , al home?*/}
+                    {ordenId ? "" :<button  disabled={!(nombre ,apellido, telefono, email, emailrep)    } type="submit" >Finalizar compra</button> }                    
+                    { ordenId ? <Link to='/' >{' '} <button>Inicio</button></Link> :<Link to='/Cart' >{' '} <button>Volver al Carrito</button></Link>}
+                </form>
+               
+            </div>
+            <ul>
+                <li><p>Producto</p> <p>Precio unitario</p> <p>Precio por cantidad</p></li>
+                {cart.map((p)=>(<li key={p.id}>
+                                         <p>{p.title}</p>
+                                         <p>${p.Precio}</p>
+                                         <p>${p.Precio * p.stock }</p>
+                                         
+                                   </li>))}
+                 <li className="totalPrice"><p>Precio Total:</p> <p>${totalPrice()}</p></li>
+            </ul>
+         </div> 
+         </>
+            )
    
 
 }
