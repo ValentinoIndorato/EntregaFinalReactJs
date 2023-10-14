@@ -4,7 +4,8 @@ import { Link } from "react-router-dom"
 function NavBar() {
     return (
         <nav className="NabVar">
-            <ul> <Link to="/">Mercado Norte</Link>
+            <ul> 
+                <li ><Link to="/" className="MercadoNorte">Mercado Norte</Link></li>
                 <li><Link to="/category/Bebidas">Bebidas e infuciones</Link></li>
                 <li><Link to="/category/Fiambres">Fiambres</Link></li>
                 <li><Link to="/category/Quesos">Quesos</Link> </li>                

@@ -57,7 +57,9 @@ body {
   background-color: black;
   border-radius: 100%;
 }
-
+.NabVar .MercadoNorte{
+  color: rgb(10, 228, 228);
+}
 .ItemListContainer {
   display: flex;
   flex-wrap: wrap;
