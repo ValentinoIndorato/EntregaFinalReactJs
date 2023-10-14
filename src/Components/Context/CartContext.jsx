@@ -17,6 +17,7 @@ export function CartContextProvider({children}){
           setCart([...cart, { ...item, stock }]);
         }
       };
+      
       console.log(cart )
       console.log('este es el que busco')
     
