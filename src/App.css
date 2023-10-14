@@ -1,11 +1,11 @@
 /*F1EDF6 color cuerpo*/
 
 body {
-  background-color: #282c34;
+  background-color: #F1EDF6;
 }
 
 .NabVar {
-  background-color: beige;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
 
@@ -17,12 +17,22 @@ body {
   flex-wrap: wrap;
   text-align: center;
   list-style: none;
+  justify-content: space-evenly;
+  width: 50%;
+
 }
 
 .NabVar ul li {
-  margin: 1rem;
+  
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+  
+  height: 1.5rem;
+  font-weight:400;
 
+ 
 }
+
 
 .cartWidget {
   position: absolute;
@@ -37,10 +47,20 @@ body {
 }
 
 .NabVar a {
+  display: block;
   text-decoration: none;
   color: #282c34;
+  height: 1.7rem;
+  width: 10rem;
 }
-
+.NabVar ul a:hover {
+  border-radius:100px ;
+  background: #C5A7FF;
+  color: #5706AC;
+  
+  
+  
+}
 .NabVar .CartNav {
 
   text-align: right;
@@ -67,15 +87,20 @@ body {
 }
 
 .card {
-  background-color: beige;
+  background-color: #ffffff;
   padding: 0.5rem;
   margin: 1rem;
   width: 10rem;
   height: 22rem;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
 }
 
 .card:hover {
-  filter: blur(4px);
+  
+  border-color: #5706AC;
+  border-color: #C5A7FF;
+  border-color: #AA76FF;
 }
 
 .card a {
@@ -84,7 +109,11 @@ body {
 }
 
 .card img {
-  width: 100%;
+  width: 100%;  
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to top,  #c0c0c08c,  #c0c0c000) border-box;
+  border-radius:  10px; 
+  border: 1px solid #c0c0c000;
 }
 
 .card ul {
@@ -95,16 +124,28 @@ body {
 .card ul li {
   font-size: medium;
   padding-left: 0.5rem;
+
+  
 }
 
 .card .title {
   font-size: larger;
   padding-left: 0;
+  font-weight:700;
+
 
 }
+.card ul li span{
+  
+  font-weight:500;
+  
 
+
+}
 .card .SmallDescription {
   font-size: smaller;
+  color: #C5A7FF;
+  color: #AA76FF;
 }
 
 .buttonAdd {
@@ -113,35 +154,55 @@ body {
   border: none;
   border-radius: 5rem;
 }
-
+.itemDetailContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
 .ItemDetail {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   align-items: center;
   margin-top: 3rem;
+  background-color: #ffffff;
+  width: 50%;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
 }
 
 .ItemDetail ul {
   list-style: none;
   padding-left: 0;
+  background-color: #ffffff;
 }
 
 .ItemDetail ul li {
   font-size: large;
-  color: blue;
+ 
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
+.ItemDetail ul li span{
+  font-weight:500;
+}
 .ItemDetail .itemDetailTitle {
   font-size: larger;
   padding-left: 0;
-  color: rgb(255, 22, 22);
+  
+  font-weight:700;
+  
 }
-
+.ItemDetail .precio{
+  color:#5706AC
+}
 .ItemDetail img {
   width: 25%;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to top,  #c0c0c08c,  #c0c0c000) border-box;
+  border-radius:  10px; 
+  border: 1px solid #c0c0c000;
 }
 
 .ItemDetail button {
@@ -150,19 +211,26 @@ body {
   padding: 0 0.5rem;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
+  color: #fff;  
   border-radius: 10px;
-  background-color: rgb(187, 64, 64);
-  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-  box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  
+  /*#AA76FF;*/
+  background-color: #5706AC;
+  
+  /*background: linear-gradient(270deg, #5706AC 2.75%, #8047BC 100%);*/
+  /* La solucion fu esta background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);*/
+ /* background-color: rgb(230, 14, 14);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+  
 }
 
-.ItemDetail button:hover {
-  background-color: rgba(255, 0, 0, 1);
+.ItemDetail button:hover {  
+  background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);
 }
-
+.ItemDetail button:disabled{
+  background-image:none;
+  background-color: #AA76FF;
+}
 .ItemDetail button:active {
   box-shadow:
     inset -2px -2px 3px rgba(255, 255, 255, 0.6),
@@ -180,25 +248,9 @@ body {
   background-image:none;
   box-shadow:none;
 }
-.ItemDetail a {
-  text-decoration: none;
-  border: 0;
-  line-height: 1.5;
-  padding: 0 0.5rem;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  border-radius: 10px;
-  background-color: rgb(187, 64, 64);
-  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-  box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 
-}
-.ItemDetail a:hover {
-  background-color: rgba(255, 0, 0, 1);
-}
+
+
 .NoProductos {
   display: flex;  
   align-items: center;

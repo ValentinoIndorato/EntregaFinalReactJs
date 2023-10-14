@@ -7,11 +7,11 @@ function Item({ item }) {
         <img src={item.img} />
         <ul>
             <li className='title'>{item.title}</li>
-            <li className=''>Precio: ${item.Precio}</li>
+            <li className=''><span>Precio: </span> ${item.Precio}</li>
             <li className='SmallDescription'>{item.SmallDescription}</li>
-            <li className='stock'>Stock: {item.stock}</li>
-            <li className='NamePuesto'>Puesto: {item.NamePuesto}</li>
-            <li className='NumPuesto'>N° puesto: {item.NumPuesto}</li>
+            <li className='stock'><span>Stock:</span>  {item.stock}</li>
+            <li className='NamePuesto'><span>Puesto: </span>{item.NamePuesto}</li>
+            <li className='NumPuesto'><span>N° puesto: </span>{item.NumPuesto}</li>
         </ul> 
         </Link>
     </div>

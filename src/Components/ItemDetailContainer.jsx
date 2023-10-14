@@ -11,7 +11,7 @@ function ItemDetailContainer() {
         getDoc(queryDoc).then((res) => setItem({ id: res.id, ...res.data() }))
     }, [id])
     return (
-        <div>
+        <div className='itemDetailContainer'>
             <ItemDetail item={item} />
         </div>
     )
