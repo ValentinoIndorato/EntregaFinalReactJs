@@ -96,11 +96,9 @@ function Checkout(){
                
             </div>
             <ul>
-                <li><p>Producto</p> <p>Precio unitario</p> <p>Precio por cantidad</p></li>
-                {cart.map((p)=>(<li key={p.id}>
-                                         <p>{p.title}</p>
-                                         <p>${p.Precio}</p>
-                                         <p>${p.Precio * p.stock }</p>
+                <li><span>Producto</span> <span>Precio unitario</span> <span>Precio por cantidad</span></li>
+                {cart.map((p)=>(<li key={p.id}> <span> {p.title}</span><span> ${p.Precio}</span> <span className="precioXcanti"> ${p.Precio * p.stock }</span>
+                                        
                                          
                                    </li>))}
                  <li className="totalPrice"><p>Precio Total:</p> <p>${totalPrice()}</p></li>

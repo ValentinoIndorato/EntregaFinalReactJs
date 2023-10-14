@@ -34,13 +34,14 @@ function Cart() {
             </>
         )
     }
-    return (<>
+    return (<div className= 'ContenedorCart'>
+        
+        <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
         <div className="cart">
-          <p>Monto total: ${totalPrice()}</p>
+          <p><span>Monto total:</span> ${totalPrice()}</p>
           <Link to='/checkout' >{' '} <button>Confirmar</button></Link>             
         </div>
-        <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
-        </>
+        </div>
     )
 }
 export default Cart

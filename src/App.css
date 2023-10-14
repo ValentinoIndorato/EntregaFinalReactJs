@@ -197,16 +197,26 @@ body {
 .ItemDetail a:hover {
   background-color: rgba(255, 0, 0, 1);
 }
+.ContenedorCart{
+  display: flex;
+  
+  justify-content: space-evenly;
+}
+.ContenedorCart span{
+  color: rgb(8, 165, 113);
+}
 .cart{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  /*width: 15%; hace lo que quiero q es el space between pero hace wrap y baja el boton*/
 }
 .cart p{
   background-color: bisque;
 }
 .cart button{
+  margin-left: 10%;
   text-decoration: none;
   border: 0;
   line-height: 1.5;
@@ -221,10 +231,13 @@ body {
     inset 2px 2px 3px rgba(255, 255, 255, 0.6),
     inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
+
+.cart button:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
 .CartItem{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 30rem;
+  
 }
 .itemCart {
   list-style: none;
@@ -232,19 +245,28 @@ body {
   display: flex;
   align-items: center;
   background-color: bisque;
-  width: 25%;
+  
   
  
 }
 
 .itemCart img {
-  width: 100%;
+  width: 20%;
+  
   
 }
+.itemCart ul {
+  
+  padding-left: 0;
 
+  
+}
 .itemCart li {
   list-style: none;
   padding-left: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .itemCart .titleCart {
@@ -256,10 +278,16 @@ body {
  margin-right:1rem ;
   
 }
+.itemCart .remov_add{
+  display: flex;
+  justify-content: space-between;
+  
+}
 .ordenCheckout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
 
 }
 
@@ -295,21 +323,88 @@ body {
 }
 
 .ordenCheckout ul {
+  margin: 0;
+  
   padding-left: 0;
+ 
 }
 
-.ordenCheckout ul li {
-  display: flex;
-  flex-wrap: wrap;
+.ordenCheckout ul li {   
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  
   justify-content: space-between;
+  margin: 0.5rem 0 0.5rem 0;
+  
 }
 
-.ordenCheckout ul li p {
-  padding-left: 1rem;
-}
+
 
 .ordenCheckout .totalPrice {
   display: flex;
   justify-content: space-between;
 
 }
+.precioXcanti{
+  text-align: right;
+}
+.ordenCheckout  button{
+  
+  text-decoration: none;
+  border: 0;
+  line-height: 1.5;
+  
+  font-size: smaller;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgb(187, 64, 64);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+.ordenCheckout  button:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+.ordenCheckout  button:disabled{
+  border: none;
+  line-height: none;
+  padding: none;
+  font-size: none;
+  text-align: none;
+  color: none;
+  border-radius: none;
+  background-color: none;
+  background-image:none;
+  box-shadow:none;
+  opacity: 0.6;
+}
+.ordenCheckout  input{
+  /*width: 50px;*/
+  border: 1px solid red;
+  border-radius: 4px;
+}
+/*.ordenCheckout input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+.ordenCheckout input[type=text]:focus {
+  width: 100%;
+} para que sea pequeño y se agrande*/
+
+.ordenCheckout  input:invalid {
+  background-color: pink;
+}
+/* align content e aling item distintos*/
+/*Supuesto css de default button
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.16, rgb(207, 207, 207)), color-stop(0.79, rgb(252, 252, 252)));
+background-image: -moz-linear-gradient(center bottom, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%);
+background-image: linear-gradient(to top, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%); 
+padding: 3px;
+border: 1px solid #000;
+color: black;
+text-decoration: none;*/
