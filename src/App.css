@@ -373,14 +373,7 @@ body {
   text-align: center;
   color: #ffffff;  
   border-radius: 10px;
-  
-  /*#AA76FF;*/
-  background-color: #5706AC;
-  
-  /*background: linear-gradient(270deg, #5706AC 2.75%, #8047BC 100%);*/
-  /* La solucion fu esta background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);*/
- /* background-color: rgb(230, 14, 14);
-  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+  background-color: #5706AC;  
   
 }
 
@@ -391,6 +384,7 @@ body {
   background-image:none;
   background-color: #AA76FF;
 }
+
 .ordenCheckout {
   display: flex;
   flex-wrap: wrap;
@@ -398,7 +392,6 @@ body {
   align-items: center;
 
 }
-
 .Checkout {
   display: flex;
   flex-direction: column;
@@ -417,81 +410,85 @@ body {
   justify-content: left;
   width: 100%;
 }
+.form label{
+  font-weight: 600;
+  margin-top:0.5rem ;
+}
 
 .errorForm {
   color: red;
+  font-weight: 600;
 }
 
-.enviadoForm {
+.enviadoForm {  
+  font-weight: 600;
+}
+.enviadoForm span{
   color: rgb(247, 0, 255);
 }
-
 .ordenCheckout a {
   text-decoration: none;
 }
 
 .ordenCheckout ul {
-  margin: 0;
-  
-  padding-left: 0;
- 
+  margin: 0;  
+  background-color: #ffffff;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;  
+  padding: 1.2%;
 }
 
 .ordenCheckout ul li {   
   display: grid;
-  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
-  
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);  
   justify-content: space-between;
-  margin: 0.5rem 0 0.5rem 0;
-  
+  margin: 0.5rem 0 0.5rem 0;  
 }
-
-
-
+.ordenCheckout ul li span{
+  font-weight: 600;
+}
 .ordenCheckout .totalPrice {
   display: flex;
   justify-content: space-between;
+ 
 
+}
+.ordenCheckout .totalPrice span {
+  text-decoration: underline;
+}
+.ordenCheckout .totalPrice .totalPriceSpan{
+  color: #5706AC;
 }
 .precioXcanti{
   text-align: right;
-}
-.ordenCheckout  button{
+  color: #AA76FF;
   
-  text-decoration: none;
+}
+.ordenCheckout button {
   border: 0;
   line-height: 1.5;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-align: center;  
+  border: 1px solid #5706AC;
+  border-radius: 10px;  
+  margin-bottom: 0.5rem;
   
-  font-size: smaller;
-  text-align: center;
-  color: #fff;
-  border-radius: 10px;
-  background-color: rgb(187, 64, 64);
-  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-  box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
-.ordenCheckout  button:hover {
-  background-color: rgba(255, 0, 0, 1);
+.ordenCheckout button:hover { 
+  color:#ffffff;   
+  background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);
 }
-.ordenCheckout  button:disabled{
-  border: none;
-  line-height: none;
-  padding: none;
-  font-size: none;
-  text-align: none;
-  color: none;
-  border-radius: none;
-  background-color: none;
+.ordenCheckout button:disabled{
   background-image:none;
-  box-shadow:none;
-  opacity: 0.6;
+  color:currentcolor;
+  background-color: #AA76FF;
+  border: none;
 }
 .ordenCheckout  input{
   /*width: 50px;*/
-  border: 1px solid red;
-  border-radius: 4px;
+  border: 1px solid #C0C0C0 ;
+  border-radius: 10px;
 }
 /*.ordenCheckout input[type=text] {
   transition: width 0.4s ease-in-out;
@@ -502,7 +499,9 @@ body {
 } para que sea pequeño y se agrande*/
 
 .ordenCheckout  input:invalid {
-  background-color: pink;
+  background-color: #AA76FF;
+  border: 1px solid #5706AC ;
+  border-radius: 10px;
 }
 .error404{
   display: flex;
