@@ -6,7 +6,7 @@ import { CartContext } from "./Context/CartContext"
 
 function Cart() {
     const { cart, totalPrice } = useContext(CartContext)
-    console.log(cart.length )
+    console.log(cart.length)
     /*const order={
         buyer:{
             name:'Cosme',
@@ -26,21 +26,21 @@ function Cart() {
         const orderCollection= collection(db, 'orders')
         addDoc(orderCollection, order).then(({id}))
     }*/
-    if (cart.length  === 0) {
+    if (cart.length === 0) {
         return (
-            <>
-               <p>No hay productos</p>
-               <Link to='/'>Hacer compra</Link>
-            </>
+            <div className="NoProductos">
+                <p>No hay productos <Link to='/'>Hacer compra</Link></p>
+                
+            </div>
         )
     }
-    return (<div className= 'ContenedorCart'>
-        
-        <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
-        <div className="cart">
-          <p><span>Monto total:</span> ${totalPrice()}</p>
-          <Link to='/checkout' >{' '} <button>Confirmar</button></Link>             
-        </div>
+    return (
+        <div className='ContenedorCart'>
+            <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
+            <div className="cart">
+                <p><span>Monto total:</span> ${totalPrice()}</p>
+                <Link to='/checkout' >{' '} <button>Confirmar</button></Link>
+            </div>
         </div>
     )
 }

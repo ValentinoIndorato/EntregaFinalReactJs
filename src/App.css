@@ -199,6 +199,18 @@ body {
 .ItemDetail a:hover {
   background-color: rgba(255, 0, 0, 1);
 }
+.NoProductos {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  margin-top: 5rem;
+}
+
+.NoProductos a{
+ 
+  text-decoration: none;
+}
 .ContenedorCart{
   display: flex;
   
@@ -397,6 +409,19 @@ body {
 
 .ordenCheckout  input:invalid {
   background-color: pink;
+}
+.error404{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.error404 a{
+  text-decoration: none;
+  color: antiquewhite; 
+  font-size: xx-large;
+}
+.error404 h1{
+  font-size: 5rem;
 }
 /* align content e aling item distintos*/
 /*Supuesto css de default button
