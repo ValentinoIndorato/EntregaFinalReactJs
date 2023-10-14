@@ -72,11 +72,15 @@ body {
 }
 
 .NabVar span {
-  font-size: larger;
-  color: rgb(255, 23, 23);
-  background-color: black;
-  border-radius: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
 }
+.NabVar span:hover{
+  border-color: #aa75ff;
+  
+} 
 .NabVar .MercadoNorte{
   color: rgb(10, 228, 228);
 }
@@ -211,7 +215,7 @@ body {
   padding: 0 0.5rem;
   font-size: 1rem;
   text-align: center;
-  color: #fff;  
+  color:#ffffff;  
   border-radius: 10px;
   
   /*#AA76FF;*/
@@ -231,6 +235,7 @@ body {
   background-image:none;
   background-color: #AA76FF;
 }
+/*Revisar esta de abajo*/
 .ItemDetail button:active {
   box-shadow:
     inset -2px -2px 3px rgba(255, 255, 255, 0.6),
@@ -264,56 +269,61 @@ body {
   text-decoration: none;
 }
 .ContenedorCart{
-  display: flex;
-  
-  justify-content: space-evenly;
-}
-.ContenedorCart span{
-  color: rgb(8, 165, 113);
+  display: flex;  
+  justify-content: space-evenly;  
+  margin-top: 3rem;
 }
 .cart{
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
   /*width: 15%; hace lo que quiero q es el space between pero hace wrap y baja el boton*/
+  border-radius:  10px; 
+  border: 1px solid #c0c0c0;
+  height: 5rem;
+  padding: 0.3%;
+  position: sticky;
+  top: 20px;
 }
 .cart p{
-  background-color: bisque;
+  font-weight:600;
+  margin-right: 0.2rem;
 }
-.cart button{
-  margin-left: 10%;
-  text-decoration: none;
+.cart span{
+  color: #5706AC;  
+}
+.cart button {
   border: 0;
   line-height: 1.5;
   padding: 0 0.5rem;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
+  color: #ffffff;  
   border-radius: 10px;
-  background-color: rgb(187, 64, 64);
-  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-  box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  background-color: #5706AC;  
 }
-
-.cart button:hover {
-  background-color: rgba(255, 0, 0, 1);
+.cart button:hover {  
+  background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);
+}
+.cart button:disabled{
+  background-image:none;
+  background-color: #AA76FF;
 }
 .CartItem{
   width: 30rem;
-  
 }
 .itemCart {
   list-style: none;
   padding: 0;
-  display: flex;
+  display: flex; 
   align-items: center;
-  background-color: bisque;
-  
-  
- 
+  background-color:#ffffff; 
+  border-radius:  10px; 
+  border: 1px solid #c0c0c0;
+  margin-top: 1rem;
 }
 
 .itemCart img {
@@ -337,17 +347,49 @@ body {
 
 .itemCart .titleCart {
   padding-left: 0;
-  color: rgb(250, 10, 10);
+  font-weight:700;
 }
 .itemCart span {
-  color: rgb(6, 136, 136);
- margin-right:1rem ;
-  
+ font-weight:600;
+ margin-right:1rem ;  
+}
+.itemCart .precio{
+  color:#AA76FF;
+}
+.itemCart .precioXc{
+  color:#5706AC;
 }
 .itemCart .remov_add{
   display: flex;
   justify-content: space-between;
   
+}
+.itemCart button {
+  margin-top:0.5rem ;
+  border: 0;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;  
+  border-radius: 10px;
+  
+  /*#AA76FF;*/
+  background-color: #5706AC;
+  
+  /*background: linear-gradient(270deg, #5706AC 2.75%, #8047BC 100%);*/
+  /* La solucion fu esta background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);*/
+ /* background-color: rgb(230, 14, 14);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+  
+}
+
+.itemCart button:hover {  
+  background-image: linear-gradient(to bottom left,  #5706AC 2.75%,#8047BC 70%, #8047BC 100%);
+}
+.itemCart button:disabled{
+  background-image:none;
+  background-color: #AA76FF;
 }
 .ordenCheckout {
   display: flex;

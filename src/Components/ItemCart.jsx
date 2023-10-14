@@ -7,12 +7,12 @@ function ItemCart({item}){
      
         <div className="itemCart">            
             <img src={item.img}/>
-            <ul><span></span>
+            <ul>
             <li className="titleCart">{item.title } </li>
             <li><span>Descripción:</span> {item.SmallDescription } </li>
             <li><span>Cantidad a comprar:</span> {item.stock } </li>
-            <li><span>Precio unitario:</span> ${item.Precio} </li>
-            <li><span>Precio por cantidad:</span> ${item.Precio * item.stock} </li>             
+            <li><span>Precio unitario:</span><span className="precio"> ${item.Precio}</span> </li>
+            <li><span>Precio por cantidad:</span> <span className="precioXc">${item.Precio * item.stock}</span> </li>             
             <div className="remov_add">
                 <button onClick={()=>{removeProduct(item.id)}}>Remover </button>    
                 <button disabled={item.stock===10} onClick={()=>{addProduct(item, 1)}}>Agregar producto </button> 

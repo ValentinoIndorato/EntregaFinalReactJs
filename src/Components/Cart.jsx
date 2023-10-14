@@ -38,8 +38,8 @@ function Cart() {
         <div className='ContenedorCart'>
             <div className="CartItem">{cart.map((p) => (<ItemCart key={p.id} item={p} />))}</div>
             <div className="cart">
-                <p><span>Monto total:</span> ${totalPrice()}</p>
-                <Link to='/checkout' >{' '} <button>Confirmar</button></Link>
+                <p>Monto total:<span>${totalPrice()}</span></p>
+                <Link to='/checkout' ><button>Confirmar</button></Link>
             </div>
         </div>
     )
