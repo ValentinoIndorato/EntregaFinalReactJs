@@ -9,3 +9,4 @@ Consideraciones de funcionalidad.
 - En el carrito decidi colocar un boton que "agrega UN producto", "remover" todos y si quiere agregar mas de un producto que use "agregar varios". Entiendo que no es lo mas deseable, a mi modo de ver, pero es lo que he logrado que funcione.
 Hay un error que al hacer esto no le importa la cantidad que hay en el carrito al redireccionar para agregar varios.
 -Otra cuestion es que al recargar la pagina no queda guardado la cantidad de productos a comprar, por no utilizar el storage. (Itentar Agregar.)
+Ambas son cosas a agregar o mejorar.
