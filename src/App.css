@@ -52,6 +52,7 @@ body {
   color: #282c34;
   height: 1.7rem;
   width: 10rem;
+  
 }
 .NabVar ul a:hover {
   border-radius:100px ;
@@ -69,6 +70,8 @@ body {
 
 .NabVar .CartNav img {
   width: 45%;
+ 
+
 }
 
 .NabVar span {
@@ -82,7 +85,7 @@ body {
   
 } 
 .NabVar .MercadoNorte{
-  color: rgb(10, 228, 228);
+  color: #5706AC;
 }
 .ItemListContainer {
   display: flex;
@@ -506,11 +509,11 @@ body {
 .error404{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .error404 a{
   text-decoration: none;
-  color: antiquewhite; 
+  color: #5706AC; 
   font-size: xx-large;
 }
 .error404 h1{
