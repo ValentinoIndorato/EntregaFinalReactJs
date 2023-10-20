@@ -519,6 +519,23 @@ body {
 .error404 h1{
   font-size: 5rem;
 }
+.Checkout .form input{
+  /*border-color: #61dafb;*/
+}
+.Checkout .form input:focus{
+  
+  /*border-top-color: rgb(27, 116, 228);
+  border-right-color: rgb(27, 116, 228);
+  border-bottom-color: rgb(27, 116, 228);
+  border-left-color: rgb(228, 50, 27);
+  border-color: #61dafb;*/
+  outline-color: #00f12000;/* solucion al borde, pero pq me da este problema y en los navegadores de face no lo pone como caracteristica*/
+  /*border-width: 1rem;*/
+  /*outline:solid blue;/* le da el relleno*/
+  caret-color: #e15d13;
+  box-shadow: 0 0 0 2px #829bb5;/* le da color a un borde*/
+  box-shadow: 0 0 0 2px #5706AC;
+}
 /* align content e aling item distintos*/
 /*Supuesto css de default button
 -webkit-border-radius: 5px;
