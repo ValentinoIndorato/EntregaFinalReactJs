@@ -1,3 +1,4 @@
+npm start
 Web app tipo e-commers relacionada con el rubro alimenticion, de momento se plantearon un home en el cual se visualizan todos los productos, y tres link los cuales se llaman y direccionan a las categorias.
 -Una navbar que contiene un link al home y los link de categorias, un carrito con la numeracion de elementos dentro.
 -Para comprar se debe acceder al producto, que direcciona al producto segun su id. Dicha direccion muestra el detalle del producto y los botones para sumar o restar un producto, uno para agregar al carrito y el terminar compra que se aparece tras agregar al carrito. El botton terminar compra, direcciona al carrito, en el cual aparecen los producctos a comprar con la cantidad, el precio x unidad y precio por cantidad. A su derecha tendra el monto total y un boton para confirmar.
