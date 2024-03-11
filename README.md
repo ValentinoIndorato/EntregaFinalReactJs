@@ -1,4 +1,4 @@
-# El Norte | [elnorte.netlify.app](https://elnorte.netlify.app/) <sub>*Diseñado y desarrollado por Valentino Indorato*</sub>
+# El Norte | [Visitar](https://elnorte.netlify.app/) / <sub>*Diseñado y desarrollado por Valentino Indorato*</sub>
 ##  E-commerce web app, enfocada en el rubro alimenticio
 ***Idea o ¿porque? al final****
 
@@ -27,8 +27,8 @@ Como clonar el repo y ejecutar el proyecto localmente:
 - npm install
 - npm start
 ## Tecnologías Utilizadas
-| Figma | HTML, CSS y JavaScript | React JS | react-router-dom | Firebase |
-|-------| ---------------------- | -------- | ---------------- | ---------|
+| Figma | HTML, CSS y JavaScript | React JS | react-router-dom | Firebase | Netlify |
+|-------| ---------------------- | -------- | ---------------- | ---------| --------|
 
 
 ## Idea
