@@ -1,9 +1,14 @@
-npm start
-Web app tipo e-commers relacionada con el rubro alimenticion, de momento se plantearon un home en el cual se visualizan todos los productos, y tres link los cuales se llaman y direccionan a las categorias.
--Una navbar que contiene un link al home y los link de categorias, un carrito con la numeracion de elementos dentro.
--Para comprar se debe acceder al producto, que direcciona al producto segun su id. Dicha direccion muestra el detalle del producto y los botones para sumar o restar un producto, uno para agregar al carrito y el terminar compra que se aparece tras agregar al carrito. El botton terminar compra, direcciona al carrito, en el cual aparecen los producctos a comprar con la cantidad, el precio x unidad y precio por cantidad. A su derecha tendra el monto total y un boton para confirmar.
-- Al confirmar se direcciona al checkout, donde habra un form y un detalle de los montos.
-- Tras enviar correctamente el form se detalla el id de la orden y sube al firebase.
+# El Norte
+##  E-commerce web app, enfocada en el rubro alimenticio
+
+
+ De momento se plantearon un home que incluye una navbar y todos los productos en formato card, con algunos datos.
+- Navbar: contiene un link al home, los links de categorías y un carrito con la numeración de elementos dentro que direcciona a los productos que se van a comprar.
+- Para comprar se debe acceder al producto que direcciona según su id.
+  - Dicha dirección muestra el detalle del producto y la funcionalidad para sumar o restar un producto, la de agregar al carrito y la de terminar compra que aparece tras agregar al carrito. 
+  - El botón terminar compra, direcciona al carrito, en el cual aparecen los productos seleccionados. A su derecha tendrá el monto total y podrá confirmar la compra.
+  - Al confirmar se direcciona al checkout, donde habrá un formulario y un detalle de los montos.
+  - Tras enviar correctamente el formulario se le detalla el id de la orden al usuario y sube a firebase.
 
 
 Consideraciones de funcionalidad.
@@ -11,3 +16,18 @@ Consideraciones de funcionalidad.
 Hay un error que al hacer esto no le importa la cantidad que hay en el carrito al redireccionar para agregar varios.
 -Otra cuestion es que al recargar la pagina no queda guardado la cantidad de productos a comprar, por no utilizar el storage. (Itentar Agregar.)
 Ambas son cosas a agregar o mejorar.
+
+### Instrucciones para ejecutar la app
+Como clonar el repo y ejecutar el proyecto localmente:
+
+#### 1. Clonar este repositorio
+
+git clone [https://github.com/No-Country/s13-03-m-node-react.git](https://github.com/ValentinoIndorato/EntregaFinalReactJs.git)
+#### 2. Abrir la terminal y correr el comando:
+
+cd EntregaFinalReactJs
+
+#### 3. Finalmente ejecutar los comandos:
+
+npm install
+npm start
