@@ -30,5 +30,10 @@ Como clonar el repo y ejecutar el proyecto localmente:
 | Figma | HTML, CSS y JavaScript | React JS | react-router-dom | Firebase | Netlify |
 |-------| ---------------------- | -------- | ---------------- | ---------| --------|
 
+## Capturas de pantalla
+<div style="display: flex; flew-wrap: wrap">
+  <img width="600" src="/src/assets/assetsReadme/desktopElNorte.gif"/>
+  <img width="200" src="/src/assets/assetsReadme/mobileElNorte.gif"/>
+</div>
 
 ## Idea
