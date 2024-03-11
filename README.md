@@ -1,6 +1,6 @@
 # El Norte | [elnorte.netlify.app](https://elnorte.netlify.app/) <sub>*Diseñado y desarrollado por Valentino Indorato*</sub>
 ##  E-commerce web app, enfocada en el rubro alimenticio
-
+***Idea o ¿porque? al final****
 
  De momento se plantearon un **home** que incluye una **navbar** y todos los **productos en formato card**, con algunos datos.
 - **Navbar**: contiene un link al home, los links de categorías y un **carrito** con la numeración de elementos dentro **que direcciona a los productos que se van a comprar**.
@@ -29,3 +29,6 @@ Como clonar el repo y ejecutar el proyecto localmente:
 ## Tecnologías Utilizadas
 | Figma | HTML, CSS y JavaScript | React JS | react-router-dom | Firebase |
 |-------| ---------------------- | -------- | ---------------- | ---------|
+
+
+## Idea
