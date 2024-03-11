@@ -25,9 +25,8 @@ body {
 .NabVar ul li {
   
   margin: 1rem 0 1rem 0;
-  text-align: center;
-  
-  height: 1.5rem;
+  text-align: center; 
+  /*height: 1.5rem;*/
   font-weight:400;
 
  
@@ -50,13 +49,14 @@ body {
   display: block;
   text-decoration: none;
   color: #282c34;
-  height: 1.7rem;
+ /* height: 1.7rem;*/
   width: fit-content;
-  padding: 0.1rem 1rem 0 1rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   
 }
 .NabVar ul a:hover {
   border-radius:100px ;
+  
   background: #C5A7FF;
   color: #5706AC;
   
