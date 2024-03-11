@@ -1,4 +1,4 @@
-# El Norte | [elnorte.netlify.app](https://elnorte.netlify.app/)
+# El Norte | [elnorte.netlify.app](https://elnorte.netlify.app/) <sub>*Diseñado y desarrollado por Valentino Indorato*</sub>
 ##  E-commerce web app, enfocada en el rubro alimenticio
 
 
